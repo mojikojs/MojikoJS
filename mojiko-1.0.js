@@ -1,6 +1,6 @@
 /*************************************************
  * MojikoJS - Engine Core
- * Copyright (c) 2012,2014,2015 Queue Sakura-Shiki
+ * Copyright (c) 2012,2014,2015 Queue.S
  * Released under the MIT license
  */
 

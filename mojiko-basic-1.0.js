@@ -1,6 +1,6 @@
 /*************************************************
  * MojikoJS - Basic action plugin.
- * Copyright (c) 2014,2015 Queue Sakura-Shiki
+ * Copyright (c) 2014,2015 Queue.S
  * Released under the MIT license
  */
 
