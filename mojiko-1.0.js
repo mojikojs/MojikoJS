@@ -18,7 +18,7 @@
 // Engine Version
 var mjkBaseEnginVersion = "1.0b";
 
-// L10N : Application Texts.
+// l18n : Application Texts.
 var MJK_TEXT = {
 	screenAlertText       : 
 	                        '<div style="font-size:800%;margin-bottom:20px;">:(</div>'+
@@ -1459,9 +1459,9 @@ var MJK = {
 		MJK.priority = 0; // Redering Priorities Management Counter.
 		MJK.checkPointList = [0]; // Senario Stoping Point ( The type is frame count.)
 
-	  /* -- Check the Window height and calcurate DOM's width. -- */
+	  /* -- Check the Window height and calcurate DOM width. -- */
 
-	  // Actors's DOM's width.
+	  // Actors DOM width.
 		MJK.moveBgMargin = [ 0, -7, 7, -14, 14 ];
 		MJK.moveChMargin = [
 			0,
@@ -2036,7 +2036,7 @@ var MJK = {
 			MJK.frame += 22;
 		}
 
-		// Change actor's expression
+		// Change actor expression
 		var charactor = MJK.$speak.attr("mjk-ch");
 		if( MJK.$speak.attr("mjk-ch") ) {
 			var showAlready = false;
@@ -2097,7 +2097,7 @@ var MJK = {
 				}
 			}
 
-			// Change the actor's expression.
+			// Change the actor expression.
 			var body = charactor.split("/")[0];
 			var faces = charactor.split("/")[1];
 			var faceList = faces.split(";");
@@ -2225,7 +2225,7 @@ var MJK = {
 						MJK.charbodies[pastPosition].attr("data-"+(MJK.frame+delay+11),"opacity:0;");
 						MJK.frame += delay+14;
 
-					// Change the actor's expression.
+					// Change the actor expression.
 					} else {
 
 						MJK.frame++;
@@ -2388,10 +2388,10 @@ var MJK = {
 				MJK.pushLoadResource(url);
 			}
 
-			// Execute actor's action.
+			// Execute actor action.
 			if( charactorAc ) {
 				MJK.frame +=1;
-				// Change the actor's scale, looks very close to the camera.
+				// Change the actor scale, looks very close to the camera.
 				if ( charactorAc.indexOf("near") !== -1 ) {
 					MJK.charbodies[pastPosition].attr("data-"+(MJK.frame),"z-index:"+(MJK.priority+1)+";");
 					MJK.charbodies[nextPosition].attr("data-"+(MJK.frame),"z-index:"+(MJK.priority+1)+";");
@@ -2521,7 +2521,7 @@ var MJK = {
 					}						
 				}
 			}
-		// Change the actor's expression at the message window.
+		// Change the actor expression at the message window.
 		} else if ( MJK.$speak.attr("mjk-ch-faceonly") ) {
 			var faceonly = MJK.$speak.attr("mjk-ch-faceonly");
 			var body = faceonly.split("/")[0];
@@ -2537,7 +2537,7 @@ var MJK = {
 				MJK.pushLoadResource(url);
 			}
 
-		// If there are no actor's action.
+		// If there are no actor action.
 		} else {
 			MJK.$speakerFaceBack.attr("data-"+(MJK.frame-5),"opacity:1;");
 			MJK.frame++;
@@ -2645,7 +2645,7 @@ var MJK = {
 		MJK.$lastSpeak = MJK.$speak;
   },
 
-  /* -- Generate plugin's background action. -- */
+  /* -- Generate plugin background action. -- */
   generateBgAction : function() {
 		var callback = function(count,css) { MJK.$effect.attr("data-"+(MJK.frame+count),css); };
 		var bgActionStr = MJK.$speak.attr("mjk-bg-action");
@@ -2677,7 +2677,7 @@ var MJK = {
   	}
   },
 
-  /* -- Generate plugin's actor's action. -- */
+  /* -- Generate plugin actor action. -- */
   generateChAction : function($target) {
 		MJK.frame += 1;
 		var callback = function(count,css) { $target.attr("data-"+(MJK.frame+count),css); };
